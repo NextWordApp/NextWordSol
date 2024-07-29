@@ -1,0 +1,4 @@
+@std=lib/forge-std/src/
+@solmate=lib/solmate/src/
+@devops/=lib/foundry-devops/
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
