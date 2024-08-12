@@ -10,6 +10,15 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 error LPNFTChecker__UnexpectedRequestID(bytes32 requestId);
 event LPNFTChecker__Response(bytes32 indexed requestId, bytes response, bytes err);
 
+/**
+ * Something wrong!!!
+ * 
+ * Computation Error: The JavaScript execution failed with the following error.
+ * Error: Failed to decrypt secrets URLs
+ * Need to know more about secrets in Functions.
+ */
+
+
 contract LPNFTChecker is FunctionsClient, Ownable {
     using FunctionsRequest for FunctionsRequest.Request;
 
@@ -29,7 +38,7 @@ contract LPNFTChecker is FunctionsClient, Ownable {
 
     bytes32 private constant s_donID = 0x66756e2d617262697472756d2d7365706f6c69612d3100000000000000000000;
     address private constant s_router = 0x234a5fb5Bd614a7AA2FfAB244D603abFA0Ac5C5C;
-    bytes private s_encryptedSecretsUrls = "https://01.functions-gateway.testnet.chain.link/";
+    bytes private s_encryptedSecretsUrls = abi.encodePacked("https://01.functions-gateway.testnet.chain.link/");
     uint8 private s_donHostedSecretsSlotID;
     uint64 private s_donHostedSecretsVersion;
 
