@@ -2,4 +2,4 @@
 @solmate=lib/solmate/src/
 @devops/=lib/foundry-devops/
 @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
-@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/src/
+@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/

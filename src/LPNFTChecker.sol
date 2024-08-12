@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
-import {FunctionsClient} from "@chainlink/contracts/v0.8/functions/v1_3_0/FunctionsClient.sol";
-import {FunctionsRequest} from "@chainlink/contracts/v0.8/functions/v1_0_0/libraries/FunctionsRequest.sol";
+import {FunctionsClient} from "@chainlink/contracts/src/v0.8/functions/v1_3_0/FunctionsClient.sol";
+import {FunctionsRequest} from "@chainlink/contracts/src/v0.8/functions/v1_0_0/libraries/FunctionsRequest.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 
@@ -33,7 +33,7 @@ contract LPNFTChecker is FunctionsClient, Ownable {
     uint8 private s_donHostedSecretsSlotID;
     uint64 private s_donHostedSecretsVersion;
 
-    uint64 private immutable s_subscriptionId = 168;
+    uint64 private immutable s_subscriptionId;
 
     constructor(uint64 _subscriptionId) FunctionsClient(s_router) Ownable(msg.sender) 
     {
